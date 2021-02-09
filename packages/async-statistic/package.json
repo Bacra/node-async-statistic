@@ -1,0 +1,27 @@
+{
+  "name": "async-statistic",
+  "version": "1.0.0",
+  "description": "node async statistic",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test_*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bacra/node-async-statistic.git"
+  },
+  "keywords": [
+    "async",
+    "statistic"
+  ],
+  "author": "Bacra Woo <bacra.woo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bacra/node-async-statistic/issues"
+  },
+  "homepage": "https://github.com/Bacra/node-async-statistic#readme",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^8.2.1"
+  }
+}
