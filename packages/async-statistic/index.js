@@ -10,7 +10,10 @@ module.exports = async function statistic(
 
 	const asyncHook = async_hooks.createHook({
 		init(asyncId, type, triggerAsyncId) {
-			const stack = options.stack && new Error().stack || undefined;
+			let stack;
+			if (options.stack) {
+				stack = new Error().stack.split(/\r?\n/).map(v => v.trim());
+			}
 
 			if (parentAsyncIds[triggerAsyncId]) {
 				parentAsyncIds[asyncId] = true;

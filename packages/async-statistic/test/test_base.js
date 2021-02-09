@@ -60,4 +60,13 @@ describe('#base', () => {
 			expect(data.outRun.length).to.be(10);
 		});
 	});
+
+	describe('#options', () => {
+		it('#stack', async () => {
+			const data = await statistic(async () => {}, { stack: true });
+
+			// console.log(data, data.inRun[0].stack);
+			expect(data.inRun[0].stack).to.be.an('array');
+		});
+	});
 });
